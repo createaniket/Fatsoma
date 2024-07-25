@@ -15,6 +15,9 @@ const Stalllayout = () => {
     }, []);
 
     const handleStallClick = async (stallNumber) => {
+
+        const UserToken = localStorage.getItem('token')
+
         const userId = '6697a799b2bd31adb62b6850'; // Replace with actual user ID
         const response = await axios.post('http://localhost:9000/stall/book', { stallNumber, userId });
         if (response.data.success) {

@@ -49,6 +49,19 @@ export const routes = [
     element: lazy(() => import('./views/dashboard/Events/Commonevents/Allevents'))
   },
 
+  {
+    exact: 'true',
+    path: '/halls/all',
+    element: lazy(() => import('./views/dashboard/Events/CommonHalls/Commonhalls'))
+  },
+
+  {
+    exact: 'true',
+    path: '/stalls/all',
+    element: lazy(() => import('./views/dashboard/Events/CommonStalls/Commonstalls'))
+  },
+
+
 
 
   {
