@@ -8,28 +8,15 @@ export default defineConfig(({ mode }) => {
 
   return {
     server: {
-      open: true, // this ensures that the browser opens upon server start
-      port: PORT // this sets a default port to 3000
+      open: true,
+      port: PORT
     },
     define: {
       global: 'window'
     },
     resolve: {
       alias: [
-        // Uncomment and configure these if you have specific path aliases
-        // { find: '', replacement: path.resolve(__dirname, 'src') },
-        // {
-        //   find: /^~(.+)/,
-        //   replacement: path.join(process.cwd(), 'node_modules/$1')
-        // },
-        // {
-        //   find: /^src(.+)/,
-        //   replacement: path.join(process.cwd(), 'src/$1')
-        // },
-        // {
-        //   find: 'assets',
-        //   replacement: path.join(process.cwd(), 'src/assets')
-        // },
+        // Define any necessary aliases here
       ]
     },
     css: {
@@ -57,6 +44,7 @@ export default defineConfig(({ mode }) => {
         ]
       }
     },
-    plugins: [react(), jsconfigPaths()]
+    plugins: [react(), jsconfigPaths()],
+    logLevel: 'info' // Ensure that log level is set to show info messages
   };
 });
