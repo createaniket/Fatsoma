@@ -7,7 +7,7 @@ const Stalllayout = () => {
 
     useEffect(() => {
         const fetchStalls = async () => {
-            const response = await axios.get('http://localhost:9000/stall/');
+            const response = await axios.get('https://goods-exporter-bakend.onrender.com/stall/');
             setStalls(response.data);
         };
 
@@ -19,7 +19,7 @@ const Stalllayout = () => {
         const UserToken = localStorage.getItem('token')
 
         const userId = '6697a799b2bd31adb62b6850'; // Replace with actual user ID
-        const response = await axios.post('http://localhost:9000/stall/book', { stallNumber, userId });
+        const response = await axios.post('https://goods-exporter-bakend.onrender.com/stall/book', { stallNumber, userId });
         if (response.data.success) {
             alert('Stall booked successfully');
             // Update stall status locally

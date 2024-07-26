@@ -18,10 +18,11 @@ const Commonstalls = () => {
 
 
 
+
   // Fetch all halls
   const fetchAllHalls = async () => {
     try {
-      const response = await axios.get('http://localhost:9000/hall/getall', { headers });
+      const response = await axios.get('https://goods-exporter-bakend.onrender.com/hall/getall', { headers });
       console.log('the halls', response);
       setHalls(response.data.halls);
       if (response.data.halls.length > 0) {
@@ -35,7 +36,7 @@ const Commonstalls = () => {
   // Fetch stalls by hall ID
   const fetchStalls = async (hallId) => {
     try {
-      const response = await axios.get(`http://localhost:9000/stall/getbyhall/${hallId}`, { headers });
+      const response = await axios.get(`https://goods-exporter-bakend.onrender.com/stall/getbyhall/${hallId}`, { headers });
       console.log('the stalls', response);
       setStalls(response.data);
     } catch (error) {
@@ -65,7 +66,7 @@ const Commonstalls = () => {
 
 
     try {
-        const response = await axios.post('http://localhost:9000/stall/book', { stallNumber }, { headers });
+        const response = await axios.post('https://goods-exporter-bakend.onrender.com/stall/book', { stallNumber }, { headers });
         if (response.data.success) {
           alert('Stall booked successfully');
           // Update stall status locally

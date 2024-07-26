@@ -12,7 +12,7 @@ const Adminstalls = () => {
   // Fetch all halls
   const fetchAllHalls = async () => {
     try {
-      const response = await axios.get('http://localhost:9000/hall/getall');
+      const response = await axios.get('https://goods-exporter-bakend.onrender.com/hall/getall');
       console.log("ythe hallls", response)
       setHalls(response.data.halls);
       if (response.data.halls.length > 0) {
@@ -26,7 +26,7 @@ const Adminstalls = () => {
   // Fetch stalls by hall ID
   const fetchStalls = async (hallId) => {
     try {
-      const response = await axios.get(`http://localhost:9000/stall/getbyhall/${hallId}`);
+      const response = await axios.get(`https://goods-exporter-bakend.onrender.com/stall/getbyhall/${hallId}`);
       console.log("the stalllslslsls", response)
       setStalls(response.data);
     } catch (error) {
