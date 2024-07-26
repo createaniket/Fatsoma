@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../../../../assets/scss/themes/UserNav/_usernav.scss';
 import LogoNew from '../../../../assets/images/logo_New.jpg'
+import ISPO from '../../../../assets/images/ISPO.jpg'
+import ISPGMLOGO from '../../../../assets/images/ISPGMLOGO.jpg'
 
 const NavbarTop = () => {
   return (
@@ -10,14 +12,14 @@ const NavbarTop = () => {
         <Row className="app-body">
           <Col xs={3} className="app-body-content-item">
             {/* <Image src={LogoNew} alt="India Emblem" fluid /> */}
-            <Image src="http://sportsgoodsindia.org/images/logo_New.jpg" alt="SGEPC LOGO" fluid />
+            <Image src={LogoNew} alt="SGEPC LOGO" fluid />
           </Col>
           <Col xs={3} className="app-body-content-item">
-            <Image src="http://sportsgoodsindia.org/images/ISPO_2013.jpg" alt="ISPO Logo" fluid />
+            <Image src={ISPO} alt="ISPO Logo" fluid />
           </Col>
           <Col xs={3} className="app-body-content-item">
             <Image
-              src="http://sportsgoodsindia.org/images/India_Sporting_Goods_March_24N.jpg"
+              src={ISPGMLOGO}
               alt="India Serves Logo"
               fluid
             />

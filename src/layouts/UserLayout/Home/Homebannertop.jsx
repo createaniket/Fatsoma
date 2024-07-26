@@ -1,6 +1,10 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import ExampleCarouselImage from '../CarouselTemplate/templateimage';
+import HomeTopBannerOne from '../../../assets/images/Home/Home_Top_Banner_one.jpg'
+import HomeTopBannertwo from '../../../assets/images/Home/Home_banner_two.jpg'
+import HomeTopBannerthree from '../../../assets/images/Home/Home_Banner_three.jpg'
+
 
 const Homebannertop = () => {
   return (
@@ -8,21 +12,21 @@ const Homebannertop = () => {
       <Carousel>
         <Carousel.Item>
           <ExampleCarouselImage 
-            imageSrc="http://sportsgoodsindia.org/images/Home_Banner_5.jpg" 
+            imageSrc={HomeTopBannerOne}
             text="First slide" 
           />
 
         </Carousel.Item>
         <Carousel.Item>
           <ExampleCarouselImage 
-            imageSrc="http://sportsgoodsindia.org/images/Home_Banner_1.jpg" 
+            imageSrc={HomeTopBannertwo}
             text="Second slide" 
           />
 
         </Carousel.Item>
         <Carousel.Item>
           <ExampleCarouselImage 
-            imageSrc="http://sportsgoodsindia.org/images/Home_Banner_3.jpg" 
+            imageSrc={HomeTopBannerthree}
             text="Third slide" 
           />
 
