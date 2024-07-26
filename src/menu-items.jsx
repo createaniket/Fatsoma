@@ -31,13 +31,13 @@ const menuItems = {
               id: 'members-trade',
               title: 'Members',
               type: 'item',
-              url: '/trade/contibutions'
+              url: '/app/admin/trade/contributions'
             },
             {
               id: 'button-mbmb',
               title: 'Members Contribution',
               type: 'item',
-              url: '/trade/contibutions/member'
+              url: '/app/admin/trade/contributions/member'
             },        
           ]
         }
@@ -60,34 +60,34 @@ const menuItems = {
               id: 'buttons-allevents',
               title: 'All Events',
               type: 'item',
-              url: '/events/viewall'
+              url: '/app/admin/events/viewall'
             },
             {
               id: 'addevent',
               title: 'Add Event',
               type: 'item',
-              url: '/events/add'
+              url: '/app/admin/events/add'
             },
 
             {
               id: 'allhalls',
               title: 'All Halls',
               type: 'item',
-              url: '/events/hall/all'
+              url: '/app/admin/events/hall/all'
             },
 
             {
               id: 'addhall',
               title: 'Add Hall',
               type: 'item',
-              url: '/events/hall/add'
+              url: '/app/admin/events/hall/add'
             },
 
             {
               id: 'allstalls',
               title: 'All Stalls',
               type: 'item',
-              url: '/events/stall/all'
+              url: '/app/admin/events/stall/all'
             },
 
         
