@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: [
-        // Define any necessary aliases here
+        // Add your necessary aliases here
       ]
     },
     css: {
@@ -45,6 +45,9 @@ export default defineConfig(({ mode }) => {
       }
     },
     plugins: [react(), jsconfigPaths()],
-    logLevel: 'info' // Ensure that log level is set to show info messages
+    logLevel: 'info',
+    build: {
+      outDir: 'dist', // Ensure the build directory is set to 'dist'
+    },
   };
 });
