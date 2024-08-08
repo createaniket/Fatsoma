@@ -1,18 +1,17 @@
+import React  from 'react';
 import Navbarmain from 'layouts/MembersLayout/Navbar';
 import NavbarTop from 'layouts/MembersLayout/Navbar/NavbarTop';
-import React from 'react';
 import Homebannertop from './Homebannertop';
-
 import Homeabtsecttoppic from '../../../assets/images/UserSite/home_abt_sect.jpg';
-
 import './Home.scss';
 import Homecustomcards from './Homecustomcards';
 import Homeabtspepc from './Homeabtspepc';
-
 import Learnhowto from '../../../assets/images/UserSite/exportone.jpg';
 import Homeimagegallery from './Homeimagegallery';
 
 const Home = () => {
+  
+
   return (
     <div>
       <NavbarTop />
@@ -21,9 +20,8 @@ const Home = () => {
 
       <div className="home-aboutsection">
         <div className="home-abt-pic">
-          <img src={Homeabtsecttoppic} alt="" />
+          <img src={Homeabtsecttoppic} alt="Sports Goods Promotion" />
         </div>
-
         <div className="home-abt-content">
           <p className="home-abt-head">Sports Goods Export Promotion Council</p>
           <p className="homeabt-cont">
@@ -39,9 +37,8 @@ const Home = () => {
 
       <div className="home-learn-howto-export">
         <div className="home-abt-pic-export">
-          <img src={Learnhowto} alt="" />
+          <img src={Learnhowto} alt="Learn How to Export" />
         </div>
-
         <div className="home-abt-content">
           <p className="home-abt-head">Learn How To Export</p>
           <p className="homeabt-cont">

@@ -11,7 +11,7 @@ const Navbarmain = () => {
     <div>
       <Navbar expand="lg" className='mainnavbar-member'>
         <Container>
-          <Navbar.Brand href="#home">SGPEC</Navbar.Brand>
+          <Navbar.Brand href="#home">SGEPC</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

@@ -4,7 +4,7 @@ import ExampleCarouselImage from '../CarouselTemplate/templateimage';
 import HomeTopBannerOne from '../../../assets/images/Home/Home_Top_Banner_one.jpg'
 import HomeTopBannertwo from '../../../assets/images/Home/Home_banner_two.jpg'
 import HomeTopBannerthree from '../../../assets/images/Home/Home_Banner_three.jpg'
-
+import './Homebannertop.scss'
 
 const Homebannertop = () => {
   return (
