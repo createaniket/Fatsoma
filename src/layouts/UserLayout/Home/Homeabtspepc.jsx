@@ -25,7 +25,7 @@ const Homeabtspepc = () => {
           <div className="icon about-us-icon"></div>
           <h3>About Us</h3>
           <p>
-            Learn more about who we are and what we do at the Sports Goods Exports Promotion Council. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, ratione.
+            Learn more about who we are and what we do at the Sports Goods Exports Promotion Council. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem added dignissimos, ratione.
           </p>
           <a href="/" className="cta">Learn About SGEPC</a>
         </div>
