@@ -11,7 +11,7 @@ import * as actionType from '../../../store/actions';
 // assets
 // import logo from '../../../assets/images/logonew.jpg';
 
-import NewLogo from '../../../assets/images/mainlogonew.png'
+// import NewLogo from '../../../assets/images/mainlogonew.png'
 
 // ==============================|| NAV BAR ||============================== //
 
@@ -57,9 +57,9 @@ const NavBar = () => {
       </div>
       <div style={{ justifyContent: 'end' }} className={collapseClass.join(' ')}>
         <NavLeft />
-        <Link to="#" className="b-brand">
+        {/* <Link to="#" className="b-brand">
           <img id="main-logo-new" src={NewLogo} alt="" className="logo" />
-        </Link>
+        </Link> */}
         <NavRight />
       </div>
     </React.Fragment>

@@ -32,11 +32,11 @@ const renderRoutes = (routes = []) => (
 );
 
 export const routes = [
-  {
-    exact: true,
-    path: '/',
-    element: lazy(() => import('./layouts/UserLayout/Home/Home'))
-  },
+  // {
+  //   exact: true,
+  //   path: '/',
+  //   element: lazy(() => import('./views/dashboard'))
+  // },
   {
     exact: true,
     path: '/events/all',
@@ -46,36 +46,6 @@ export const routes = [
     exact: true,
     path: '/halls/all',
     element: lazy(() => import('./views/dashboard/Events/CommonHalls/Commonhalls'))
-  },
-  {
-    exact: true,
-    path: '/stalls/all',
-    element: lazy(() => import('./views/dashboard/Events/CommonStalls/Commonstalls'))
-  },
-  {
-    exact: true,
-    path: '/user/auth',
-    element: lazy(() => import('./layouts/UserLayout/UserAuth/UserAuth'))
-  },
-  {
-    exact: true,
-    path: '/auth/signup-1',
-    element: lazy(() => import('./views/auth/signup/SignUp1'))
-  },
-  {
-    exact: true,
-    path: '/auth/signin-1',
-    element: lazy(() => import('./views/auth/signin/SignIn1'))
-  },
-  {
-    exact: true,
-    path: '/auth/reset-password-1',
-    element: lazy(() => import('./views/auth/reset-password/ResetPassword1'))
-  },
-  {
-    exact: true,
-    path: '/members/add/data/xlss',
-    element: lazy(() => import('./views/MemberDashboard/Memberdashboard'))
   },
   {
     path: '*',
