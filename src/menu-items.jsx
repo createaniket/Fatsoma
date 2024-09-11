@@ -15,34 +15,34 @@ const menuItems = {
         }
       ]
     },
-    {
-      id: 'utilities',
-      title: 'Utilities',
-      type: 'group',
-      icon: 'icon-ui',
-      children: [
-        {
-          id: 'component',
-          title: 'Trade',
-          type: 'collapse',
-          icon: 'feather icon-box',
-          children: [
-            {
-              id: 'members-trade',
-              title: 'Members',
-              type: 'item',
-              url: '/app/admin/trade/contributions'
-            },
-            {
-              id: 'button-mbmb',
-              title: 'Members Contribution',
-              type: 'item',
-              url: '/app/admin/trade/contributions/member'
-            },        
-          ]
-        }
-      ]
-    },
+    // {
+    //   id: 'utilities',
+    //   title: 'Utilities',
+    //   type: 'group',
+    //   icon: 'icon-ui',
+    //   children: [
+    //     {
+    //       id: 'component',
+    //       title: 'Trade',
+    //       type: 'collapse',
+    //       icon: 'feather icon-box',
+    //       children: [
+    //         {
+    //           id: 'members-trade',
+    //           title: 'Members',
+    //           type: 'item',
+    //           url: '/app/admin/trade/contributions'
+    //         },
+    //         {
+    //           id: 'button-mbmb',
+    //           title: 'Members Contribution',
+    //           type: 'item',
+    //           url: '/app/admin/trade/contributions/member'
+    //         },        
+    //       ]
+    //     }
+    //   ]
+    // },
 
     {
       id: 'events',
@@ -69,26 +69,26 @@ const menuItems = {
               url: '/app/admin/events/add'
             },
 
-            {
-              id: 'allhalls',
-              title: 'All Halls',
-              type: 'item',
-              url: '/app/admin/events/hall/all'
-            },
+            // {
+            //   id: 'allhalls',
+            //   title: 'All Halls',
+            //   type: 'item',
+            //   url: '/app/admin/events/hall/all'
+            // },
 
-            {
-              id: 'addhall',
-              title: 'Add Hall',
-              type: 'item',
-              url: '/app/admin/events/hall/add'
-            },
+            // {
+            //   id: 'addhall',
+            //   title: 'Add Hall',
+            //   type: 'item',
+            //   url: '/app/admin/events/hall/add'
+            // },
 
-            {
-              id: 'allstalls',
-              title: 'All Stalls',
-              type: 'item',
-              url: '/app/admin/events/stall/all'
-            },
+            // {
+            //   id: 'allstalls',
+            //   title: 'All Stalls',
+            //   type: 'item',
+            //   url: '/app/admin/events/stall/all'
+            // },
 
         
           ]

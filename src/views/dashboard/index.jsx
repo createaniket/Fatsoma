@@ -48,7 +48,7 @@ const DashAnalytics = () => {
         <Col md={6} xl={3}>
           <OrderCard
             params={{
-              title: 'Members',
+              title: 'Events',
               class: 'bg-c-blue',
               icon: 'feather icon-user',
               primaryText: '486',
@@ -75,9 +75,9 @@ const DashAnalytics = () => {
               title: 'Revenue',
               class: 'bg-c-yellow',
               icon: 'feather icon-repeat',
-              primaryText: 'INR 42,562',
+              primaryText: '$ 42,562',
               secondaryText: 'This Month',
-              extraText: 'INR 5,032'
+              extraText: '$ 5,032'
             }}
           />
         </Col>
@@ -87,9 +87,9 @@ const DashAnalytics = () => {
               title: 'Total Profit',
               class: 'bg-c-red',
               icon: 'feather icon-award',
-              primaryText: 'INR 9,562',
+              primaryText: '$ 9,562',
               secondaryText: 'This Month',
-              extraText: 'INR 542'
+              extraText: '$ 542'
             }}
           />
         </Col>
