@@ -10,10 +10,7 @@ const NavbarTop = () => {
     <div>
       <Container className="app-container">
         <Row className="app-body">
-          <Col xs={3} className="app-body-content-item">
-            {/* <Image src={LogoNew} alt="India Emblem" fluid /> */}
-            {/* <Image src={LogoNew} alt="SGEPC LOGO" fluid /> */}
-          </Col>
+    
           {/* <Col xs={3} className="app-body-content-item">
             <Image src={ISPO} alt="ISPO Logo" fluid />
           </Col> */}

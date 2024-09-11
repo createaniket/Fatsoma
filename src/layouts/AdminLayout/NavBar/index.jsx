@@ -9,7 +9,7 @@ import { ConfigContext } from '../../../contexts/ConfigContext';
 import * as actionType from '../../../store/actions';
 
 // assets
-// import logo from '../../../assets/images/logonew.jpg';
+import logo from '../../../assets/images/tetette.svg';
 
 // import NewLogo from '../../../assets/images/mainlogonew.png'
 
