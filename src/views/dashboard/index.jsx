@@ -203,7 +203,7 @@ const DashAnalytics = () => {
             }}
           />
         </Col> */}
-        <Col xs={12} className="d-flex justify-content-center">
+        {/* <Col xs={12} className="d-flex justify-content-center">
           <Card>
             <Card.Header>
               <h5>Activity Feed</h5>
@@ -272,7 +272,7 @@ const DashAnalytics = () => {
               </ListGroup>
             </Card.Body>
           </Card>
-        </Col>
+        </Col> */}
 
         <Col sm={12}>
           <Card>
@@ -286,10 +286,10 @@ const DashAnalytics = () => {
                     <thead>
                       <tr>
                         <th>
-                          <span>Date of Transaction</span>
+                          <span>Event Name</span>
                         </th>
                         <th>
-                          <span>Number of Transactions</span>
+                          <span>Total Ticket Sold (Lifetime)</span>
                         </th>
                         <th>
                           <span>Amount of Transaction in Lacs</span>

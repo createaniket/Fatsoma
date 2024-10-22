@@ -37,6 +37,12 @@ export const routes = [
   //   path: '/',
   //   element: lazy(() => import('./views/dashboard'))
   // },
+
+  {
+    exact: true,
+    path: '/reports/viewall',
+    element: lazy(() => import('./views/dashboard/Table/Maintable'))
+  },
   {
     exact: true,
     path: '/events/all',
@@ -90,6 +96,12 @@ export const routes = [
         exact: true,
         path: '/app/admin/events/stall/all',
         element: lazy(() => import('./views/dashboard/Events/Stall/AdminstallsLayout/Adminstalls'))
+      },
+
+      {
+        exact: true,
+        path: '/app/admin/reports/viewall',
+        element: lazy(() => import('./views/dashboard/Table/Maintable'))
       },
       {
         exact: true,

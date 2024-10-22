@@ -95,6 +95,30 @@ const menuItems = {
         },
       ]
     },
+
+    {
+      id: 'reports',
+      title: 'Reports',
+      type: 'group',
+      icon: 'icon-ui',
+      children: [
+        {
+          id: 'reports',
+          title: 'Reports',
+          type: 'collapse',
+          icon: 'feather icon-box',
+          children: [
+            {
+              id: 'buttons-allevents',
+              title: 'All Reports',
+              type: 'item',
+              url: '/app/admin/reports/viewall'
+            },
+         
+          ]
+        },
+      ]
+    },
     // {
     //   id: 'auth',
     //   title: 'Authentication',
