@@ -106,7 +106,7 @@ const Example = () => {
 
         <button className="refreshdatabtn">Refresh</button>
       </div>
-      <MaterialReactTable table={table} />;
+      <MaterialReactTable table={table} />
     </>
   );
 };
