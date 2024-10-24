@@ -108,9 +108,9 @@ const DashAnalytics = () => {
 
   return (
     <React.Fragment>
-      <Row>
+      <Row style={{margin:"20px 00"}}>
         {/* order cards */}
-        <Col md={6} xl={3}>
+        <Col md={6} xl={3} >
           <OrderCard
             params={{
               title: 'DAILY',

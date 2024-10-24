@@ -2,14 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // project import
-import NavLeft from './NavLeft';
-import NavRight from './NavRight';
+// import NavLeft from './NavLeft';
+// import NavRight from './NavRight';
 
 import { ConfigContext } from '../../../contexts/ConfigContext';
 import * as actionType from '../../../store/actions';
 
 // assets
-import logo from '../../../assets/images/tetette.svg';
+import logo from '../../../assets/images/LowercaseLogoRectblack.png';
 
 // import NewLogo from '../../../assets/images/mainlogonew.png'
 
@@ -45,22 +45,13 @@ const NavBar = () => {
   let navBar = (
     <React.Fragment>
       <div className="m-header">
-        <Link to="#" className={toggleClass.join(' ')} id="mobile-collapse" onClick={navToggleHandler}>
-          <span />
-        </Link>
-        {/* <Link to="#" className="b-brand">
+        <Link to="#" className="b-brand">
           <img id="main-logo" src={logo} alt="" className="logo" />
-        </Link> */}
-        <Link to="#" className={moreClass.join(' ')} onClick={() => setMoreToggle(!moreToggle)}>
-          <i className="feather icon-more-vertical" />
         </Link>
       </div>
-      <div style={{ justifyContent: 'end' }} className={collapseClass.join(' ')}>
-        <NavLeft />
-        {/* <Link to="#" className="b-brand">
-          <img id="main-logo-new" src={NewLogo} alt="" className="logo" />
-        </Link> */}
-        <NavRight />
+
+      <div className="dashboard_dharms_sect">
+        <p className="dashobard_heading_dharms">DASHBOARD</p>
       </div>
     </React.Fragment>
   );
