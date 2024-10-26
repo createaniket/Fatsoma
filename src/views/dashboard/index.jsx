@@ -14,31 +14,37 @@ import OrderCard from '../../components/Widgets/Statistic/OrderCard';
 // example data
 const data = [
   {
-    eventname: 'Best Event',
-    date: '01/04/2000',
-    sales: '2',
-    incentives: '12',
-    totalin: '0.8',
-    totalout: '10',
-    revenue: '20'
+    company:"Bournemouth Freshers 2024",
+    BrandName:"Bournemouth Freshers 2024",
+    eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
+    date: '16/10/2024',
+    sales: '02',
+    incentives: '00.00',
+    totalin: '£12.00',
+    totalout: '--',
+    revenue: '£12.00',
   },
   {
-    eventname: "Ani's Event",
-    date: '01/08/2008',
-    sales: '22',
-    incentives: '132',
-    totalin: '0.8',
-    totalout: '10',
-    revenue: '20'
+    company:"somename",
+    BrandName:"Bournemouth Freshers 2024",
+    eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
+    date: '13/10/2024',
+    sales: '01',
+    incentives: '00.00',
+    totalin: '£6.00',
+    totalout: '--',
+    revenue: '£6.00',
   },
   {
-    eventname: 'Dharms Event',
-    date: '01/08/2003',
-    sales: '24',
-    incentives: '142',
-    totalin: '089',
-    totalout: '53',
-    revenue: '39'
+    company:"somename",
+    BrandName:"Bournemouth Freshers 2024",
+    eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
+    date: '07/10/2024',
+    sales: '05',
+    incentives: '00.00',
+    totalin: '£30.00',
+    totalout: '--',
+    revenue: '£30.00',
   }
 ];
 
@@ -62,35 +68,48 @@ const DashAnalytics = () => {
   // memoized columns
   const columns = useMemo(
     () => [
+
+      {
+        accessorKey: 'company',
+        header: 'Company',
+        size: 160
+      },
+      {
+        accessorKey: 'BrandName',
+        header: '⁠⁠Brand Name',
+        size: 160
+      },
       {
         accessorKey: 'eventname',
         header: 'Event Name',
-        size: 160
+        size: 260
       },
       {
         accessorKey: 'date',
         header: 'Date',
-        size: 160
+        size: 100
       },
+   
+    
       {
         accessorKey: 'sales',
         header: 'Sales',
-        size: 160
+        size: 100
       },
       {
         accessorKey: 'incentives',
         header: 'Incentives',
-        size: 160
+        size: 100
       },
       {
         accessorKey: 'totalin',
         header: 'Total In',
-        size: 160
+        size: 100
       },
       {
         accessorKey: 'totalout',
         header: 'Total Out',
-        size: 160
+        size: 100
       },
       {
         accessorKey: 'revenue',
@@ -129,9 +148,9 @@ const DashAnalytics = () => {
               title: 'DAILY',
               class: 'bg-c-yellow',
               icon: 'feather icon-repeat',
-              primaryText: '€ 2401.22',
+              primaryText: '£ 2401.22',
               secondaryText: 'TOTAL REVENUE',
-              extraText: '€ 2401.22'
+              extraText: '£ 2401.22'
             }}
           />
         </Col>
@@ -141,9 +160,9 @@ const DashAnalytics = () => {
               title: 'DAILY',
               class: 'bg-c-green',
               icon: 'feather icon-tag',
-              primaryText: '€ 2401.22',
+              primaryText: '£ 2401.22',
               secondaryText: 'TOTAL INCENTIVES',
-              extraText: '€ 2401.22'
+              extraText: '£98.00'
             }}
           />
         </Col>

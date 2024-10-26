@@ -51,7 +51,7 @@ const NavBar = () => {
       </div>
 
       <div className="dashboard_dharms_sect">
-        <p className="dashobard_heading_dharms">DASHBOARD</p>
+        <p className="dashobard_heading_dharms">Dashboard</p>
       </div>
     </React.Fragment>
   );
