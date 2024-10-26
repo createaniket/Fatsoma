@@ -5,7 +5,7 @@ import { MaterialReactTable, useMaterialReactTable } from 'material-react-table'
 // example data
 const data = [
   {
-    company:"Bournemouth Freshers 2024",
+    company:"Teah beo",
     BrandName:"Bournemouth Freshers 2024",
     eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
     date: '16/10/2024',
@@ -16,7 +16,7 @@ const data = [
     revenue: '£12.00',
   },
   {
-    company:"somename",
+    company:"Teah beo",
     BrandName:"Bournemouth Freshers 2024",
     eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
     date: '13/10/2024',
@@ -27,7 +27,7 @@ const data = [
     revenue: '£6.00',
   },
   {
-    company:"somename",
+    company:"Teah beo",
     BrandName:"Bournemouth Freshers 2024",
     eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
     date: '07/10/2024',
