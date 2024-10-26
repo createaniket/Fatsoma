@@ -62,16 +62,7 @@ export const routes = [
         path: '/app/admin/dashboard/analytics',
         element: lazy(() => import('./views/dashboard'))
       },
-      {
-        exact: true,
-        path: '/app/admin/trade/contributions',
-        element: lazy(() => import('./views/MemberDashboard/Trade-UI/Memberslist/Memberslist'))
-      },
-      {
-        exact: true,
-        path: '/app/admin/trade/contributions/member',
-        element: lazy(() => import('./views/MemberDashboard/Trade-UI/Tradelist/Tradelist'))
-      },
+
       {
         exact: true,
         path: '/app/admin/events/viewall',
