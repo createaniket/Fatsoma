@@ -1336,6 +1336,16 @@
   }
 }
 @media only screen and (max-width: 575px) {
+
+  .dashobard_heading_dharms {
+display: none;
+
+  }
+
+  .b-brand img {
+    width: 40%;
+}
+
   .pcoded-header {
     .main-search.open .input-group .search-close {
       display: none;
