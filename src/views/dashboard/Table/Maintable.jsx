@@ -11,6 +11,7 @@ import Select from '@mui/material/Select';
 
 const Example = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [filteredData, setFilteredData] = useState([]);
   const [selectedOrganizer, setSelectedOrganizer] = useState('All Organizers'); // Set default to "All Organizers"
 
@@ -70,6 +71,18 @@ const Example = () => {
     enableStickyHeader: true,
     enableStickyFooter: true,
     muiTableContainerProps: { sx: { maxHeight: '500px' } },
+    muiSkeletonProps: {
+      animation: 'wave',
+    },
+    muiLinearProgressProps: {
+      color: 'secondary',
+    },
+    muiCircularProgressProps: {
+      color: 'secondary',
+    },
+    state:{ isLoading: loading }
+
+  
   });
 
   // Fetch data from backend
@@ -80,6 +93,7 @@ const Example = () => {
         console.log('Fetched Data:', response.data.data);
         setData(response.data.data);
         setFilteredData(response.data.data); // Initially show all data
+        setLoading(false)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
