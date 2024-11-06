@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 import './dasboard.css';
 
@@ -9,45 +9,15 @@ import { MaterialReactTable, useMaterialReactTable } from 'material-react-table'
 
 // project import
 import OrderCard from '../../components/Widgets/Statistic/OrderCard';
+import axios from 'axios';
 // import SocialCard from '../../components/Widgets/Statistic/SocialCard';
 
-// example data
-const data = [
-  {
-    company:"Teah beo",
-    BrandName:"Bournemouth Freshers 2024",
-    eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
-    date: '16/10/2024',
-    sales: '02',
-    incentives: '00.00',
-    totalin: '£12.00',
-    totalout: '--',
-    revenue: '£12.00',
-  },
-  {
-    company:"Teah beo",
-    BrandName:"Bournemouth Freshers 2024",
-    eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
-    date: '13/10/2024',
-    sales: '01',
-    incentives: '00.00',
-    totalin: '£6.00',
-    totalout: '--',
-    revenue: '£6.00',
-  },
-  {
-    company:"Teah beo",
-    BrandName:"Bournemouth Freshers 2024",
-    eventname: "F*CK ME It's Halloween | Bournemouth Freshers 2024",
-    date: '07/10/2024',
-    sales: '05',
-    incentives: '00.00',
-    totalin: '£30.00',
-    totalout: '--',
-    revenue: '£30.00',
-  }
-];
 
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 // ==============================|| DASHBOARD ANALYTICS ||============================== //
 
 const DashAnalytics = () => {
@@ -62,68 +32,99 @@ const DashAnalytics = () => {
 
   //   checkToken();
   // }, [navigate]);
-
   // avigate to -> /goods-exporter/react/auth/signin-1
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [selectedOrganizer, setSelectedOrganizer] = useState('All Organizers'); // Set default to "All Organizers"
 
-  // memoized columns
-  const columns = useMemo(
-    () => [
-
-      {
-        accessorKey: 'company',
-        header: 'Company',
-        size: 160
-      },
-      {
-        accessorKey: 'BrandName',
-        header: '⁠⁠Brand Name',
-        size: 160
-      },
-      {
-        accessorKey: 'eventname',
-        header: 'Event Name',
-        size: 260
-      },
-      {
-        accessorKey: 'date',
-        header: 'Date',
-        size: 100
-      },
-   
-    
-      {
-        accessorKey: 'sales',
-        header: 'Sales',
-        size: 100
-      },
-      {
-        accessorKey: 'incentives',
-        header: 'Incentives',
-        size: 100
-      },
-      {
-        accessorKey: 'totalin',
-        header: 'Total In',
-        size: 100
-      },
-      {
-        accessorKey: 'totalout',
-        header: 'Total Out',
-        size: 100
-      },
-      {
-        accessorKey: 'revenue',
-        header: 'Revenue',
-        size: 160
-      }
-    ],
-    []
-  );
+  // Memoized columns
+  const columns = useMemo(() => [
+    {
+      accessorKey: 'date',
+      header: 'Date',
+      size: 100,
+      Cell: ({ cell }) => new Date(cell.getValue()).toLocaleDateString(), // Format date
+    },
+    {
+      accessorKey: 'brands',
+      header: 'Brand Name',
+      size: 160,
+      Cell: ({ row }) => row.original.brands?.[0]?.brandName || 'No Brand',
+    },
+    {
+      accessorKey: 'events',
+      header: 'Event Name',
+      size: 280,
+      Cell: ({ row }) => row.original.brands?.[0]?.events?.[0]?.eventName || 'No Event',
+    },
+    {
+      accessorKey: 'sales',
+      header: 'Sales',
+      size: 80,
+    },
+    {
+      accessorKey: 'incentives',
+      header: 'Incentives',
+      size: 80,
+    },
+    {
+      accessorKey: 'totalIn',
+      header: 'Total In',
+      size: 120,
+      Cell: ({ cell }) => `£${cell.getValue().toFixed(2)}`,
+    },
+    {
+      accessorKey: 'totalOut',
+      header: 'Total Out',
+      size: 120,
+      Cell: ({ cell }) => `£${cell.getValue().toFixed(2)}`,
+    },
+    {
+      accessorKey: 'revenue',
+      header: 'Revenue',
+      size: 120,
+      Cell: ({ cell }) => `£${cell.getValue().toFixed(2)}`,
+    },
+  ], []);
 
   const table = useMaterialReactTable({
     columns,
-    data // data must be memoized or stable
+    data: filteredData, // Use filtered data here
+    enableStickyHeader: true,
+    enableStickyFooter: true,
+    muiTableContainerProps: { sx: { maxHeight: '500px' } },
   });
+
+  // Fetch data from backend
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://fatsoma-backend.onrender.com/api/events/getall');
+        console.log('Fetched Data:', response.data.data);
+        setData(response.data.data);
+        setFilteredData(response.data.data); // Initially show all data
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // Handle filtering based on selected organizer
+  const handleOrganizerChange = (organizerName) => {
+    setSelectedOrganizer(organizerName);
+    
+    if (organizerName === 'All Organizers') {
+      setFilteredData(data); // Reset filter, show all data
+    } else {
+      const filtered = data.filter(item =>
+        item.brands?.some(brand => brand.brandName === organizerName)
+      );
+      setFilteredData(filtered); // Update filtered data based on selected organizer
+    }
+  };
+
 
   return (
     <React.Fragment>
@@ -200,7 +201,26 @@ const DashAnalytics = () => {
             </div>
           </div>
 
+          <div className="right_refresh">
+          <Box sx={{ minWidth: 120, mx: 2 }}>
+            <FormControl fullWidth>
+              <InputLabel id="organizer-select-label">Organizer</InputLabel>
+              <Select
+                labelId="organizer-select-label"
+                id="organizer-select"
+                value={selectedOrganizer}
+                label="Organizer"
+                onChange={(e) => handleOrganizerChange(e.target.value)}
+              >
+                <MenuItem value="All Organizers">All Organizers</MenuItem> {/* Option to reset filter */}
+                <MenuItem value="Bournemouth Freshers 2024">Bournemouth Freshers 2024</MenuItem>
+                <MenuItem value="A-level Results 2024">A-level Results 2024</MenuItem>
+                <MenuItem value="Coventry Freshers 2024">Coventry Freshers 2024</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
           <button className="refreshdatabtn">Refresh</button>
+        </div>
         </div>
 
         <Col sm={12} style={{ margin: '10px 00 00 00' }}>
