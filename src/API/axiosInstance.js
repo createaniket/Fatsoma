@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const axiosInstance = axios.create({
-  baseURL: 'https://goods-exporter-bakend.onrender.com/', // Replace with your API base URL
+  baseURL: 'https://fatsoma-backend.onrender.com/', // Replace with your API base URL
   // baseURL:'http://localhost:9000/',
   headers: {
     'Content-Type': 'application/json',
